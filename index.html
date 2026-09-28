@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Crimmshaw Heights — Interactive Map</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app" class="map-app" aria-label="Crimmshaw Heights interactive map">
+    <section id="mainMap" class="map-screen" aria-label="Crimmshaw Heights map">
+      <img class="map-image" src="assets/crimmshaw-heights-main.png" alt="Aerial map of Crimmshaw Heights surrounded by mountains, neighborhoods, roads and waterways">
+      <div class="map-vignette" aria-hidden="true"></div>
+      <div id="hotspots" class="hotspots"></div>
+      <div id="overview" class="overview" aria-live="polite">
+        <div class="overview-kicker">Explore Crimmshaw Heights</div>
+        <h1 id="overviewTitle">Hover over an area</h1>
+        <p id="overviewText">Move across the map to discover the major districts of town.</p>
+        <span class="overview-hint">Click to enter</span>
+      </div>
+      <div class="map-instructions">Hover to explore · Click to enter</div>
+    </section>
+
+    <section id="detailMap" class="detail-screen" aria-hidden="true">
+      <div class="detail-placeholder" aria-hidden="true">
+        <div class="placeholder-grid"></div>
+        <div class="placeholder-label">AREA MAP<br><small>PLACEHOLDER IMAGE</small></div>
+      </div>
+      <div class="detail-shade" aria-hidden="true"></div>
+      <aside class="detail-panel">
+        <div class="detail-kicker">Crimmshaw Heights</div>
+        <h2 id="detailTitle"></h2>
+        <div id="detailBody" class="detail-body"></div>
+        <div class="detail-meta" id="detailMeta"></div>
+      </aside>
+      <button id="backButton" class="back-button" type="button">← Back to Crimmshaw Heights</button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
